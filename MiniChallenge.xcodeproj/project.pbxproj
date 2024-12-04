@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9CC2D008083004C54C3 /* AppDelegate.swift */; };
 		EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9CF2D008083004C54C3 /* SceneDelegate.swift */; };
-		EF0DE9D42D008083004C54C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9D02D008083004C54C3 /* ViewController.swift */; };
 		EF0DE9D52D008083004C54C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0DE9CD2D008083004C54C3 /* Assets.xcassets */; };
 		EF0DE9D92D008085004C54C3 /* MiniChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9D72D008085004C54C3 /* MiniChallengeTests.swift */; };
 		EF0DE9DD2D008087004C54C3 /* MiniChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */; };
 		EF0DE9DE2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */; };
+		EF0DE9E62D009734004C54C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9E52D00972C004C54C3 /* HomeView.swift */; };
+		EF0DE9E92D009AE3004C54C3 /* HomeView+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9E82D009AE0004C54C3 /* HomeView+SearchBar.swift */; };
+		EF0DE9EB2D009B5A004C54C3 /* HomeView+FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9EA2D009B56004C54C3 /* HomeView+FilterMenu.swift */; };
+		EF0DE9ED2D00A716004C54C3 /* HomeView+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9EC2D00A70F004C54C3 /* HomeView+Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +44,13 @@
 		EF0DE9CD2D008083004C54C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF0DE9CE2D008083004C54C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF0DE9CF2D008083004C54C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EF0DE9D02D008083004C54C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF0DE9D72D008085004C54C3 /* MiniChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeTests.swift; sourceTree = "<group>"; };
 		EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeUITests.swift; sourceTree = "<group>"; };
 		EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF0DE9E52D00972C004C54C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EF0DE9E82D009AE0004C54C3 /* HomeView+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+SearchBar.swift"; sourceTree = "<group>"; };
+		EF0DE9EA2D009B56004C54C3 /* HomeView+FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+FilterMenu.swift"; sourceTree = "<group>"; };
+		EF0DE9EC2D00A70F004C54C3 /* HomeView+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Card.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +103,6 @@
 			children = (
 				EF0DE9CF2D008083004C54C3 /* SceneDelegate.swift */,
 				EF0DE9CC2D008083004C54C3 /* AppDelegate.swift */,
-				EF0DE9D02D008083004C54C3 /* ViewController.swift */,
 				EF0DE9CD2D008083004C54C3 /* Assets.xcassets */,
 				EF0DE9CE2D008083004C54C3 /* Info.plist */,
 				EF0DE9DF2D008089004C54C3 /* View */,
@@ -129,6 +134,7 @@
 		EF0DE9DF2D008089004C54C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EF0DE9E72D009AD8004C54C3 /* Home */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +165,17 @@
 			children = (
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		EF0DE9E72D009AD8004C54C3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DE9EC2D00A70F004C54C3 /* HomeView+Card.swift */,
+				EF0DE9EA2D009B56004C54C3 /* HomeView+FilterMenu.swift */,
+				EF0DE9E82D009AE0004C54C3 /* HomeView+SearchBar.swift */,
+				EF0DE9E52D00972C004C54C3 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */,
+				EF0DE9E92D009AE3004C54C3 /* HomeView+SearchBar.swift in Sources */,
+				EF0DE9EB2D009B5A004C54C3 /* HomeView+FilterMenu.swift in Sources */,
 				EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */,
-				EF0DE9D42D008083004C54C3 /* ViewController.swift in Sources */,
+				EF0DE9E62D009734004C54C3 /* HomeView.swift in Sources */,
+				EF0DE9ED2D00A716004C54C3 /* HomeView+Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +368,6 @@
 				INFOPLIST_FILE = MiniChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -376,7 +395,6 @@
 				INFOPLIST_FILE = MiniChallenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
