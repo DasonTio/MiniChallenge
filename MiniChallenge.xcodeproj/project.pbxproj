@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9CC2D008083004C54C3 /* AppDelegate.swift */; };
+		EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9CF2D008083004C54C3 /* SceneDelegate.swift */; };
+		EF0DE9D42D008083004C54C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9D02D008083004C54C3 /* ViewController.swift */; };
+		EF0DE9D52D008083004C54C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF0DE9CD2D008083004C54C3 /* Assets.xcassets */; };
+		EF0DE9D92D008085004C54C3 /* MiniChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9D72D008085004C54C3 /* MiniChallengeTests.swift */; };
+		EF0DE9DD2D008087004C54C3 /* MiniChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */; };
+		EF0DE9DE2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EF0DE9AF2D007EF1004C54C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,38 +37,15 @@
 		EF0DE9982D007EEF004C54C3 /* MiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0DE9AE2D007EF1004C54C3 /* MiniChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0DE9B82D007EF1004C54C3 /* MiniChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0DE9CC2D008083004C54C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF0DE9CD2D008083004C54C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF0DE9CE2D008083004C54C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF0DE9CF2D008083004C54C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF0DE9D02D008083004C54C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF0DE9D72D008085004C54C3 /* MiniChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeTests.swift; sourceTree = "<group>"; };
+		EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeUITests.swift; sourceTree = "<group>"; };
+		EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		EF0DE9C02D007EF1004C54C3 /* Exceptions for "MiniChallenge" folder in "MiniChallenge" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = EF0DE9972D007EEF004C54C3 /* MiniChallenge */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EF0DE99A2D007EEF004C54C3 /* MiniChallenge */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				EF0DE9C02D007EF1004C54C3 /* Exceptions for "MiniChallenge" folder in "MiniChallenge" target */,
-			);
-			path = MiniChallenge;
-			sourceTree = "<group>";
-		};
-		EF0DE9B12D007EF1004C54C3 /* MiniChallengeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MiniChallengeTests;
-			sourceTree = "<group>";
-		};
-		EF0DE9BB2D007EF1004C54C3 /* MiniChallengeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = MiniChallengeUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EF0DE9952D007EEF004C54C3 /* Frameworks */ = {
@@ -88,9 +75,9 @@
 		EF0DE98F2D007EEF004C54C3 = {
 			isa = PBXGroup;
 			children = (
-				EF0DE99A2D007EEF004C54C3 /* MiniChallenge */,
-				EF0DE9B12D007EF1004C54C3 /* MiniChallengeTests */,
-				EF0DE9BB2D007EF1004C54C3 /* MiniChallengeUITests */,
+				EF0DE9D12D008083004C54C3 /* MiniChallenge */,
+				EF0DE9D82D008085004C54C3 /* MiniChallengeTests */,
+				EF0DE9DC2D008087004C54C3 /* MiniChallengeUITests */,
 				EF0DE9992D007EEF004C54C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +90,75 @@
 				EF0DE9B82D007EF1004C54C3 /* MiniChallengeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EF0DE9D12D008083004C54C3 /* MiniChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DE9CF2D008083004C54C3 /* SceneDelegate.swift */,
+				EF0DE9CC2D008083004C54C3 /* AppDelegate.swift */,
+				EF0DE9D02D008083004C54C3 /* ViewController.swift */,
+				EF0DE9CD2D008083004C54C3 /* Assets.xcassets */,
+				EF0DE9CE2D008083004C54C3 /* Info.plist */,
+				EF0DE9DF2D008089004C54C3 /* View */,
+				EF0DE9E02D00809B004C54C3 /* Interactor */,
+				EF0DE9E12D0080A4004C54C3 /* Presenter */,
+				EF0DE9E22D0080B0004C54C3 /* Entity */,
+				EF0DE9E32D0080B5004C54C3 /* Router */,
+			);
+			path = MiniChallenge;
+			sourceTree = "<group>";
+		};
+		EF0DE9D82D008085004C54C3 /* MiniChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DE9D72D008085004C54C3 /* MiniChallengeTests.swift */,
+			);
+			path = MiniChallengeTests;
+			sourceTree = "<group>";
+		};
+		EF0DE9DC2D008087004C54C3 /* MiniChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */,
+				EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */,
+			);
+			path = MiniChallengeUITests;
+			sourceTree = "<group>";
+		};
+		EF0DE9DF2D008089004C54C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF0DE9E02D00809B004C54C3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EF0DE9E12D0080A4004C54C3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EF0DE9E22D0080B0004C54C3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EF0DE9E32D0080B5004C54C3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +175,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				EF0DE99A2D007EEF004C54C3 /* MiniChallenge */,
 			);
 			name = MiniChallenge;
 			packageProductDependencies = (
@@ -143,9 +196,6 @@
 			dependencies = (
 				EF0DE9B02D007EF1004C54C3 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				EF0DE9B12D007EF1004C54C3 /* MiniChallengeTests */,
-			);
 			name = MiniChallengeTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +215,6 @@
 			);
 			dependencies = (
 				EF0DE9BA2D007EF1004C54C3 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				EF0DE9BB2D007EF1004C54C3 /* MiniChallengeUITests */,
 			);
 			name = MiniChallengeUITests;
 			packageProductDependencies = (
@@ -225,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0DE9D52D008083004C54C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +297,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */,
+				EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */,
+				EF0DE9D42D008083004C54C3 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0DE9D92D008085004C54C3 /* MiniChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0DE9DD2D008087004C54C3 /* MiniChallengeUITests.swift in Sources */,
+				EF0DE9DE2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
