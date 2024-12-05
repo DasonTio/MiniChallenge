@@ -1,43 +1,46 @@
 //
-//  CollectionView.swift
+//  HomeView.swift
 //  MiniChallenge
 //
-//  Created by Dason Tiovino on 04/12/24.
+//  Created by Dason Tiovino on 05/12/24.
 //
 
 import UIKit
 
-class HomeView: UIViewController {
+class HomeView: UIView{
+    let searchBarComponent: SearchBarComponent = .init()
+    let filterMenuComponent: FilterMenuComponent = .init()
     
-    let searchBar: UISearchBar = .init()
-    var filterScrollView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.showsHorizontalScrollIndicator = false
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        cv.backgroundColor = .clear
-        return cv
-    }()
-    
-    var filterMenus : [String] = ["Indian", "Chinese", "American", "Japanese", "Mexican", "Italian", "Korean", "Vietnamese", "Thai"]
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        
-        setupSearchBar()
-        setupFilterMenu()
-        setupCards()
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        backgroundColor = .white
+        setupViews()
     }
     
-    func setupCards() {
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupViews(){
+        addSubview(searchBarComponent)
+        
+        searchBarComponent.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            searchBarComponent.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            searchBarComponent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            searchBarComponent.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            searchBarComponent.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        addSubview(filterMenuComponent)
+        filterMenuComponent.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            filterMenuComponent.topAnchor.constraint(equalTo: searchBarComponent.bottomAnchor, constant: 10),
+            filterMenuComponent.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 20),
+            filterMenuComponent.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            filterMenuComponent.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            filterMenuComponent.heightAnchor.constraint(equalToConstant: 100)
+        ])
         
     }
-}
-
-#Preview{
-    HomeView()
 }
