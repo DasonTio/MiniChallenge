@@ -17,6 +17,7 @@
 		EF0DE9E92D009AE3004C54C3 /* HomeView+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9E82D009AE0004C54C3 /* HomeView+SearchBar.swift */; };
 		EF0DE9EB2D009B5A004C54C3 /* HomeView+FilterMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9EA2D009B56004C54C3 /* HomeView+FilterMenu.swift */; };
 		EF0DE9ED2D00A716004C54C3 /* HomeView+Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9EC2D00A70F004C54C3 /* HomeView+Card.swift */; };
+		EF3BB2FB2D01A4530053DE9D /* HomeView+FilteredMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BB2FA2D01A44D0053DE9D /* HomeView+FilteredMenuButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EF0DE9E82D009AE0004C54C3 /* HomeView+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+SearchBar.swift"; sourceTree = "<group>"; };
 		EF0DE9EA2D009B56004C54C3 /* HomeView+FilterMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+FilterMenu.swift"; sourceTree = "<group>"; };
 		EF0DE9EC2D00A70F004C54C3 /* HomeView+Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+Card.swift"; sourceTree = "<group>"; };
+		EF3BB2FA2D01A44D0053DE9D /* HomeView+FilteredMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+FilteredMenuButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				EF0DE9EC2D00A70F004C54C3 /* HomeView+Card.swift */,
 				EF0DE9EA2D009B56004C54C3 /* HomeView+FilterMenu.swift */,
+				EF3BB2FA2D01A44D0053DE9D /* HomeView+FilteredMenuButton.swift */,
 				EF0DE9E82D009AE0004C54C3 /* HomeView+SearchBar.swift */,
 				EF0DE9E52D00972C004C54C3 /* HomeView.swift */,
 			);
@@ -317,6 +320,7 @@
 				EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */,
 				EF0DE9E92D009AE3004C54C3 /* HomeView+SearchBar.swift in Sources */,
 				EF0DE9EB2D009B5A004C54C3 /* HomeView+FilterMenu.swift in Sources */,
+				EF3BB2FB2D01A4530053DE9D /* HomeView+FilteredMenuButton.swift in Sources */,
 				EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */,
 				EF0DE9E62D009734004C54C3 /* HomeView.swift in Sources */,
 				EF0DE9ED2D00A716004C54C3 /* HomeView+Card.swift in Sources */,

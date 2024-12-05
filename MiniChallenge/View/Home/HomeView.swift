@@ -9,9 +9,19 @@ import UIKit
 
 class HomeView: UIViewController {
     
-    let searchBar: UISearchBar = UISearchBar()
-    let filterScrollView: UIScrollView = UIScrollView()
-    var filterMenus : [UIButton] = []
+    let searchBar: UISearchBar = .init()
+    var filterScrollView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.showsHorizontalScrollIndicator = false
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        cv.backgroundColor = .clear
+        return cv
+    }()
+    
+    var filterMenus : [String] = ["Indian", "Chinese", "American", "Japanese", "Mexican", "Italian", "Korean", "Vietnamese", "Thai"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,4 +36,8 @@ class HomeView: UIViewController {
     func setupCards() {
         
     }
+}
+
+#Preview{
+    HomeView()
 }

@@ -10,57 +10,56 @@ import UIKit
 extension HomeView {
     func setupFilterMenu(){
         view.addSubview(filterScrollView)
-        
         filterScrollView.translatesAutoresizingMaskIntoConstraints = false
+        filterScrollView.delegate = self
+        filterScrollView.dataSource = self
+        filterScrollView.allowsSelection = true
+        
+        filterScrollView.register(FilteredMenuButton.self, forCellWithReuseIdentifier: FilteredMenuButton.identifier)
         
         NSLayoutConstraint.activate([
-            filterScrollView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
-            filterScrollView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-            filterScrollView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 16),
-            filterScrollView.heightAnchor.constraint(equalToConstant: 100),
+            filterScrollView.heightAnchor.constraint(equalToConstant: 50),
+            filterScrollView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
+            filterScrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            filterScrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
         ])
-        
-        let filterTitles = ["Indian", "Chinese", "Japanese", "French", "Moroccan", "Indonesian"]
-        for title in filterTitles {
-            let button = UIButton(type: .system)
-            var config = UIButton.Configuration.filled()
-            config.title = title
-            config.buttonSize = .mini
-            config.baseBackgroundColor = .gray
-            config.baseForegroundColor = .white
-            config.background.cornerRadius = 16
-            config.contentInsets = NSDirectionalEdgeInsets(
-                top: 0,
-                leading: 20,
-                bottom: 0,
-                trailing: 20
-            )
-            
-            button.configuration = config
-            
-            button.addAction(UIAction(handler: { [weak self] _ in
-                self?.didSelectFilter(button)
-            }), for: .touchUpInside)
-            
-            button.translatesAutoresizingMaskIntoConstraints = false
-            filterScrollView.addSubview(button)
-            filterMenus.append(button)
-            
-            NSLayoutConstraint.activate([
-                button.heightAnchor.constraint(equalToConstant: 40),
-                button.topAnchor.constraint(equalTo: filterScrollView.topAnchor, constant: 5),
-                button.bottomAnchor.constraint(equalTo: filterScrollView.bottomAnchor, constant: -5),
-            ])
-            
-            if(filterMenus.count - 2 >= 0){
-                NSLayoutConstraint.activate([
-                    button.leadingAnchor.constraint(equalTo: filterMenus[filterMenus.count - 2].trailingAnchor, constant: 16)
-                ])
-            }
-        }
+    }
+}
+
+
+extension HomeView : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FilteredMenuButtonDelegate{
+    
+    func didTapFilterButton(_ filter: String) {
+        print(filter)
     }
     
-    @objc func didSelectFilter(_ sender: UIButton){
-        print(sender.titleLabel?.text ?? "")
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.filterMenus.count
     }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilteredMenuButton.identifier, for: indexPath) as? FilteredMenuButton else {
+            return UICollectionViewCell()
+        }
+        let title = filterMenus[indexPath.item]
+        cell.configure(with: title, delegate: self)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = filterScrollView.frame.width / 3
+        return CGSize(width: size, height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedFilter = filterMenus[indexPath.item]
+        print("Selected filter: \(selectedFilter)")
+        // Handle the filter selection here
+        // For example, update UI or filter data based on selection
+    }
+    
+    
+    
 }
