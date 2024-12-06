@@ -9,10 +9,18 @@ import UIKit
 
 class FilterMenuComponentCell: UICollectionViewCell {
     static let identifier: String = "FilterMenuComponentCell"
+    
+    var isActive: Bool = false {
+        didSet{
+            button.backgroundColor = isActive ? .black: .white
+            button.setTitleColor(isActive ? .white: .black, for: .normal)
+        }
+    }
     private lazy var button: UIButton = {
         let button = UIButton()
         button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .lightGray
+        button.backgroundColor = .white
+        button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 16
         button.contentEdgeInsets = UIEdgeInsets(
@@ -37,7 +45,6 @@ class FilterMenuComponentCell: UICollectionViewCell {
     }
     
     func config(title:String){
-        print("SET", title)
         button.setTitle(title, for: .normal)
     }
     

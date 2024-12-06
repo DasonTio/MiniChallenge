@@ -14,7 +14,14 @@
 		EF0DE9DD2D008087004C54C3 /* MiniChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */; };
 		EF0DE9DE2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */; };
 		EF0DE9E62D009734004C54C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0DE9E52D00972C004C54C3 /* HomeViewController.swift */; };
-		EFECD8002D01F8DC00634820 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD7FF2D01F8D800634820 /* Card.swift */; };
+		EF609E872D0294BC00E59A7C /* CardMenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E862D0294B700E59A7C /* CardMenuComponent.swift */; };
+		EF609E892D02959100E59A7C /* CardMenuComponent+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E882D02958E00E59A7C /* CardMenuComponent+Cell.swift */; };
+		EF609E8C2D02A36A00E59A7C /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E8B2D02A36400E59A7C /* HomeInteractor.swift */; };
+		EF609E8F2D02A48C00E59A7C /* MealCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E8E2D02A47B00E59A7C /* MealCloud.swift */; };
+		EF609E922D02A67300E59A7C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E912D02A67100E59A7C /* HomePresenter.swift */; };
+		EF609E942D02A75200E59A7C /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E932D02A74F00E59A7C /* MealResponse.swift */; };
+		EF609E982D02A93200E59A7C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E972D02A92F00E59A7C /* HomeRouter.swift */; };
+		EFECD8002D01F8DC00634820 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD7FF2D01F8D800634820 /* Meal.swift */; };
 		EFECD8022D01FD3700634820 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8012D01FD3600634820 /* HomeView.swift */; };
 		EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8062D0200E900634820 /* SearchBarComponent.swift */; };
 		EFECD8092D020A9D00634820 /* FilterMenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8082D020A9A00634820 /* FilterMenuComponent.swift */; };
@@ -50,7 +57,14 @@
 		EF0DE9DA2D008087004C54C3 /* MiniChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeUITests.swift; sourceTree = "<group>"; };
 		EF0DE9DB2D008087004C54C3 /* MiniChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF0DE9E52D00972C004C54C3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EFECD7FF2D01F8D800634820 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EF609E862D0294B700E59A7C /* CardMenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenuComponent.swift; sourceTree = "<group>"; };
+		EF609E882D02958E00E59A7C /* CardMenuComponent+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardMenuComponent+Cell.swift"; sourceTree = "<group>"; };
+		EF609E8B2D02A36400E59A7C /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		EF609E8E2D02A47B00E59A7C /* MealCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCloud.swift; sourceTree = "<group>"; };
+		EF609E912D02A67100E59A7C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		EF609E932D02A74F00E59A7C /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
+		EF609E972D02A92F00E59A7C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		EFECD7FF2D01F8D800634820 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		EFECD8012D01FD3600634820 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EFECD8062D0200E900634820 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
 		EFECD8082D020A9A00634820 /* FilterMenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenuComponent.swift; sourceTree = "<group>"; };
@@ -175,17 +189,62 @@
 			isa = PBXGroup;
 			children = (
 				EFECD8032D01FEEC00634820 /* Component */,
+				EF609E992D02A9ED00E59A7C /* View */,
+				EF609E902D02A66900E59A7C /* Presenter */,
+				EF609E8A2D02A34B00E59A7C /* Interactor */,
 				EFECD7FE2D01F8CF00634820 /* Entity */,
+				EF609E972D02A92F00E59A7C /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EF609E8A2D02A34B00E59A7C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EF609E8B2D02A36400E59A7C /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EF609E8D2D02A47100E59A7C /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				EF609E952D02A75500E59A7C /* Response */,
+				EF609E8E2D02A47B00E59A7C /* MealCloud.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		EF609E902D02A66900E59A7C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF609E912D02A67100E59A7C /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EF609E952D02A75500E59A7C /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EF609E932D02A74F00E59A7C /* MealResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		EF609E992D02A9ED00E59A7C /* View */ = {
+			isa = PBXGroup;
+			children = (
 				EF0DE9E52D00972C004C54C3 /* HomeViewController.swift */,
 				EFECD8012D01FD3600634820 /* HomeView.swift */,
 			);
-			path = Home;
+			path = View;
 			sourceTree = "<group>";
 		};
 		EFECD7FE2D01F8CF00634820 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				EFECD7FF2D01F8D800634820 /* Card.swift */,
+				EF609E8D2D02A47100E59A7C /* DTO */,
+				EFECD7FF2D01F8D800634820 /* Meal.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -193,6 +252,8 @@
 		EFECD8032D01FEEC00634820 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				EF609E882D02958E00E59A7C /* CardMenuComponent+Cell.swift */,
+				EF609E862D0294B700E59A7C /* CardMenuComponent.swift */,
 				EFECD80A2D020B3500634820 /* FilterMenuComponent+Cell.swift */,
 				EFECD8082D020A9A00634820 /* FilterMenuComponent.swift */,
 				EFECD8062D0200E900634820 /* SearchBarComponent.swift */,
@@ -340,13 +401,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */,
+				EF609E8C2D02A36A00E59A7C /* HomeInteractor.swift in Sources */,
 				EFECD8092D020A9D00634820 /* FilterMenuComponent.swift in Sources */,
+				EF609E8F2D02A48C00E59A7C /* MealCloud.swift in Sources */,
+				EF609E982D02A93200E59A7C /* HomeRouter.swift in Sources */,
 				EFECD80B2D020B3A00634820 /* FilterMenuComponent+Cell.swift in Sources */,
 				EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */,
-				EFECD8002D01F8DC00634820 /* Card.swift in Sources */,
+				EF609E892D02959100E59A7C /* CardMenuComponent+Cell.swift in Sources */,
+				EFECD8002D01F8DC00634820 /* Meal.swift in Sources */,
 				EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */,
+				EF609E942D02A75200E59A7C /* MealResponse.swift in Sources */,
+				EF609E922D02A67300E59A7C /* HomePresenter.swift in Sources */,
 				EFECD8022D01FD3700634820 /* HomeView.swift in Sources */,
 				EF0DE9E62D009734004C54C3 /* HomeViewController.swift in Sources */,
+				EF609E872D0294BC00E59A7C /* CardMenuComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

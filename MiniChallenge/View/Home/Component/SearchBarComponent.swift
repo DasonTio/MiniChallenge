@@ -8,6 +8,9 @@
 import UIKit
 
 class SearchBarComponent: UIView, UISearchBarDelegate {
+    
+    public var didSearch: (String)->Void = {text in }
+    
     private lazy var searchView: UISearchBar = {
         let searchView = UISearchBar()
         searchView.placeholder = "Search..."
@@ -45,17 +48,12 @@ class SearchBarComponent: UIView, UISearchBarDelegate {
         ])
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-    }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Search")
+        didSearch(searchBar.text ?? "")
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         searchBar.resignFirstResponder()
     }
-
 }

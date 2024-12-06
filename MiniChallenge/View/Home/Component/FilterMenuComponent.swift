@@ -8,13 +8,13 @@
 import UIKit
 
 class FilterMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
-    
-    var menus: [String] = ["Japanese", "Taiwanese", "Indonesian", "Indian"]
+    var didFilter: (([String]) -> Void) = {text in}
+    var filteredMenu: [String] = []
+    var menus: [String] = ["Japanese", "Chinese", "Indian", "British", "Portuguese", "Jamaican", "French", "Mexican", "Greek", "American"]
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 16
         layout.minimumInteritemSpacing = 24
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -25,6 +25,7 @@ class FilterMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDel
             FilterMenuComponentCell.self,
             forCellWithReuseIdentifier: FilterMenuComponentCell.identifier
         )
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         return collectionView
@@ -72,6 +73,16 @@ class FilterMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(menus[indexPath.row])
+        let cell = collectionView.cellForItem(at: indexPath) as? FilterMenuComponentCell ?? FilterMenuComponentCell()
+        cell.isActive.toggle()
+        
+        let menu = menus[indexPath.row]
+        if(filteredMenu.contains{$0 == menu}){
+            filteredMenu.removeAll{$0 == menu}
+        }else{
+            filteredMenu.append(menu)
+        }
+        
+        didFilter(self.filteredMenu)
     }
 }
