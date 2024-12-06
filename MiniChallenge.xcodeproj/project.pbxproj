@@ -223,7 +223,6 @@
 				EF66D0832D02FA0F008ACFD0 /* View */,
 				EF66D0822D02FA0A008ACFD0 /* Interactor */,
 				EF66D0842D02FA14008ACFD0 /* Presenter */,
-				EF66D0852D02FA18008ACFD0 /* Entity */,
 				EF66D0802D02FA05008ACFD0 /* MealRouter.swift */,
 			);
 			path = Meal;
@@ -251,13 +250,6 @@
 				EF66D08C2D030105008ACFD0 /* MealPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		EF66D0852D02FA18008ACFD0 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		EFECD7FE2D01F8CF00634820 /* Entity */ = {

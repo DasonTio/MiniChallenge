@@ -20,7 +20,8 @@ class CardMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDeleg
             description: ".",
             from: ".",
             image: ".",
-            category: "."
+            category: ".",
+            ingredients: []
         )
     ] {
         didSet {
