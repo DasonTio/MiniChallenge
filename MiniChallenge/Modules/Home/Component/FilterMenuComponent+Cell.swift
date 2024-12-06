@@ -30,7 +30,6 @@ class FilterMenuComponentCell: UICollectionViewCell {
             right: 20
         )
         
-//        button.configuration?.contentInsets.leading = 100
         return button
     }()
     

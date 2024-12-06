@@ -21,6 +21,10 @@
 		EF609E922D02A67300E59A7C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E912D02A67100E59A7C /* HomePresenter.swift */; };
 		EF609E942D02A75200E59A7C /* MealResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E932D02A74F00E59A7C /* MealResponse.swift */; };
 		EF609E982D02A93200E59A7C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E972D02A92F00E59A7C /* HomeRouter.swift */; };
+		EF66D0812D02FA07008ACFD0 /* MealRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D0802D02FA05008ACFD0 /* MealRouter.swift */; };
+		EF66D0892D02FA2A008ACFD0 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D0882D02FA27008ACFD0 /* MealViewController.swift */; };
+		EF66D08B2D0300E6008ACFD0 /* MealInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */; };
+		EF66D08D2D030107008ACFD0 /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D08C2D030105008ACFD0 /* MealPresenter.swift */; };
 		EFECD8002D01F8DC00634820 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD7FF2D01F8D800634820 /* Meal.swift */; };
 		EFECD8022D01FD3700634820 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8012D01FD3600634820 /* HomeView.swift */; };
 		EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8062D0200E900634820 /* SearchBarComponent.swift */; };
@@ -64,6 +68,10 @@
 		EF609E912D02A67100E59A7C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		EF609E932D02A74F00E59A7C /* MealResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealResponse.swift; sourceTree = "<group>"; };
 		EF609E972D02A92F00E59A7C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		EF66D0802D02FA05008ACFD0 /* MealRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRouter.swift; sourceTree = "<group>"; };
+		EF66D0882D02FA27008ACFD0 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
+		EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInteractor.swift; sourceTree = "<group>"; };
+		EF66D08C2D030105008ACFD0 /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
 		EFECD7FF2D01F8D800634820 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		EFECD8012D01FD3600634820 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EFECD8062D0200E900634820 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
@@ -123,11 +131,7 @@
 				EF0DE9CC2D008083004C54C3 /* AppDelegate.swift */,
 				EF0DE9CD2D008083004C54C3 /* Assets.xcassets */,
 				EF0DE9CE2D008083004C54C3 /* Info.plist */,
-				EF0DE9DF2D008089004C54C3 /* View */,
-				EF0DE9E02D00809B004C54C3 /* Interactor */,
-				EF0DE9E12D0080A4004C54C3 /* Presenter */,
-				EF0DE9E22D0080B0004C54C3 /* Entity */,
-				EF0DE9E32D0080B5004C54C3 /* Router */,
+				EF0DE9DF2D008089004C54C3 /* Modules */,
 			);
 			path = MiniChallenge;
 			sourceTree = "<group>";
@@ -149,40 +153,13 @@
 			path = MiniChallengeUITests;
 			sourceTree = "<group>";
 		};
-		EF0DE9DF2D008089004C54C3 /* View */ = {
+		EF0DE9DF2D008089004C54C3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EF66D07F2D02F9F9008ACFD0 /* Meal */,
 				EF0DE9E72D009AD8004C54C3 /* Home */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EF0DE9E02D00809B004C54C3 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		EF0DE9E12D0080A4004C54C3 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		EF0DE9E22D0080B0004C54C3 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
-		EF0DE9E32D0080B5004C54C3 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		EF0DE9E72D009AD8004C54C3 /* Home */ = {
@@ -238,6 +215,49 @@
 				EFECD8012D01FD3600634820 /* HomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EF66D07F2D02F9F9008ACFD0 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				EF66D0832D02FA0F008ACFD0 /* View */,
+				EF66D0822D02FA0A008ACFD0 /* Interactor */,
+				EF66D0842D02FA14008ACFD0 /* Presenter */,
+				EF66D0852D02FA18008ACFD0 /* Entity */,
+				EF66D0802D02FA05008ACFD0 /* MealRouter.swift */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		EF66D0822D02FA0A008ACFD0 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EF66D0832D02FA0F008ACFD0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF66D0882D02FA27008ACFD0 /* MealViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF66D0842D02FA14008ACFD0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EF66D08C2D030105008ACFD0 /* MealPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EF66D0852D02FA18008ACFD0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		EFECD7FE2D01F8CF00634820 /* Entity */ = {
@@ -401,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF0DE9D22D008083004C54C3 /* AppDelegate.swift in Sources */,
+				EF66D08D2D030107008ACFD0 /* MealPresenter.swift in Sources */,
 				EF609E8C2D02A36A00E59A7C /* HomeInteractor.swift in Sources */,
 				EFECD8092D020A9D00634820 /* FilterMenuComponent.swift in Sources */,
 				EF609E8F2D02A48C00E59A7C /* MealCloud.swift in Sources */,
@@ -408,13 +429,16 @@
 				EFECD80B2D020B3A00634820 /* FilterMenuComponent+Cell.swift in Sources */,
 				EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */,
 				EF609E892D02959100E59A7C /* CardMenuComponent+Cell.swift in Sources */,
+				EF66D08B2D0300E6008ACFD0 /* MealInteractor.swift in Sources */,
 				EFECD8002D01F8DC00634820 /* Meal.swift in Sources */,
 				EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */,
 				EF609E942D02A75200E59A7C /* MealResponse.swift in Sources */,
+				EF66D0812D02FA07008ACFD0 /* MealRouter.swift in Sources */,
 				EF609E922D02A67300E59A7C /* HomePresenter.swift in Sources */,
 				EFECD8022D01FD3700634820 /* HomeView.swift in Sources */,
 				EF0DE9E62D009734004C54C3 /* HomeViewController.swift in Sources */,
 				EF609E872D0294BC00E59A7C /* CardMenuComponent.swift in Sources */,
+				EF66D0892D02FA2A008ACFD0 /* MealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

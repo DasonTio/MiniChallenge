@@ -52,5 +52,9 @@ class HomePresenter: HomePresenterProtocol {
             }
         }
     }
+    
+    func pushToDetail(meal: Meal) {
+        router.pushToDetail(meal: meal)
+    }
 }
 

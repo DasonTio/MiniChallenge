@@ -11,8 +11,21 @@ class CardMenuComponentCell: UICollectionViewCell {
     static let identifier: String = "CardMenuComponentCell"
     let component: UIStackView = .init()
     let imageView: UIImageView = .init()
-    let title: UILabel = .init()
-    let label: UILabel = .init()
+    let title: UILabel = {
+        let uiLabel: UILabel = .init()
+        uiLabel.font = .systemFont(ofSize: 18)
+        uiLabel.textColor = .white
+        uiLabel.backgroundColor
+        return uiLabel
+    }()
+    
+    let label: UILabel = {
+        let uiLabel = UILabel()
+        uiLabel.font = .systemFont(ofSize: 12)
+        uiLabel.textColor = .black
+        uiLabel.backgroundColor = .white
+        return uiLabel
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,9 +39,9 @@ class CardMenuComponentCell: UICollectionViewCell {
     
     private func setupFrame(){
         contentView.addSubview(component)
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = .black
         component.axis = .vertical
-        component.alignment = .center
+        component.alignment = .leading
         component.addArrangedSubview(imageView)
         component.addArrangedSubview(title)
         component.addArrangedSubview(label)
@@ -47,7 +60,6 @@ class CardMenuComponentCell: UICollectionViewCell {
         self.title.text = title
         self.label.text = label
         
-
         let url = URL(string: image)
         if let url {
             URLSession.shared.dataTask(with: url){data, response, error in
@@ -57,6 +69,5 @@ class CardMenuComponentCell: UICollectionViewCell {
                 }
             }.resume()
         }
-        
     }
 }

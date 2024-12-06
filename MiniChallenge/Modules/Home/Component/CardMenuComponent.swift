@@ -8,6 +8,8 @@
 import UIKit
 
 class CardMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    var didClickCard: (Meal) -> Void = { _ in }
     private var collectionViewHeightConstraint: NSLayoutConstraint?
     
     var unfilteredData: [Meal] = []
@@ -96,5 +98,9 @@ class CardMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.bounds.width - 24) / 2, height: 200)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didClickCard(data[indexPath.row])
     }
 }

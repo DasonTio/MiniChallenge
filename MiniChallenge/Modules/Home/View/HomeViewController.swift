@@ -27,7 +27,6 @@ class HomeViewController: UIViewController, HomeViewProtocol{
     
     override func viewDidLayoutSubviews() {
         viewControllerView.searchBarComponent.didSearch = {query in
-            
             self.presenter?.didSearch(query: query)
         }
         
@@ -39,6 +38,10 @@ class HomeViewController: UIViewController, HomeViewProtocol{
                 let filteredData = prevData.filter{ query.contains($0.from)}
                 self.viewControllerView.cardMenuComponent.data = filteredData
             }
+        }
+        
+        viewControllerView.cardMenuComponent.didClickCard = {meal in
+            self.presenter?.pushToDetail(meal: meal)
         }
     }
     
@@ -53,5 +56,5 @@ class HomeViewController: UIViewController, HomeViewProtocol{
 }
 
 #Preview{
-    HomeView()
+    HomeRouter().createModule()
 }

@@ -9,13 +9,20 @@ import UIKit
 
 protocol HomeRouterProtocol: AnyObject{
     func createModule() -> UIViewController
+    func pushToDetail(meal: Meal) -> ()
 }
 
 final class HomeRouter: HomeRouterProtocol{
+    var router: UINavigationController?
+    
+    func setupNavigationController(router: UINavigationController){
+        self.router = router
+    }
+    
     func createModule() -> UIViewController {
+        let router = self
         let view = HomeViewController()
         let interactor = HomeInteractor()
-        let router = HomeRouter()
         let presenter = HomePresenter(
             view: view,
             interactor: interactor,
@@ -25,5 +32,9 @@ final class HomeRouter: HomeRouterProtocol{
         view.presenter = presenter
         
         return view
+    }
+    
+    func pushToDetail(meal: Meal){
+        router?.pushViewController(MealViewController(meal: meal), animated: true)
     }
 }
