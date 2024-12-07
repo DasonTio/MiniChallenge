@@ -26,7 +26,6 @@
 		EF66D08B2D0300E6008ACFD0 /* MealInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */; };
 		EF66D08D2D030107008ACFD0 /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D08C2D030105008ACFD0 /* MealPresenter.swift */; };
 		EFECD8002D01F8DC00634820 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD7FF2D01F8D800634820 /* Meal.swift */; };
-		EFECD8022D01FD3700634820 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8012D01FD3600634820 /* HomeView.swift */; };
 		EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8062D0200E900634820 /* SearchBarComponent.swift */; };
 		EFECD8092D020A9D00634820 /* FilterMenuComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8082D020A9A00634820 /* FilterMenuComponent.swift */; };
 		EFECD80B2D020B3A00634820 /* FilterMenuComponent+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD80A2D020B3500634820 /* FilterMenuComponent+Cell.swift */; };
@@ -73,7 +72,6 @@
 		EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInteractor.swift; sourceTree = "<group>"; };
 		EF66D08C2D030105008ACFD0 /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
 		EFECD7FF2D01F8D800634820 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
-		EFECD8012D01FD3600634820 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EFECD8062D0200E900634820 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
 		EFECD8082D020A9A00634820 /* FilterMenuComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenuComponent.swift; sourceTree = "<group>"; };
 		EFECD80A2D020B3500634820 /* FilterMenuComponent+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FilterMenuComponent+Cell.swift"; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				EF0DE9E52D00972C004C54C3 /* HomeViewController.swift */,
-				EFECD8012D01FD3600634820 /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -427,7 +424,6 @@
 				EF609E942D02A75200E59A7C /* MealResponse.swift in Sources */,
 				EF66D0812D02FA07008ACFD0 /* MealRouter.swift in Sources */,
 				EF609E922D02A67300E59A7C /* HomePresenter.swift in Sources */,
-				EFECD8022D01FD3700634820 /* HomeView.swift in Sources */,
 				EF0DE9E62D009734004C54C3 /* HomeViewController.swift in Sources */,
 				EF609E872D0294BC00E59A7C /* CardMenuComponent.swift in Sources */,
 				EF66D0892D02FA2A008ACFD0 /* MealViewController.swift in Sources */,
