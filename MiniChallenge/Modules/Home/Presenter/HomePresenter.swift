@@ -27,7 +27,6 @@ class HomePresenter: HomePresenterProtocol {
                 let meals = try await interactor.fetchData(search: "Chicken")
                 await MainActor.run {
                     view?.showMeals(meals)
-                    print("SHOW MEALS")
                 }
             } catch {
                 await MainActor.run {
@@ -43,7 +42,6 @@ class HomePresenter: HomePresenterProtocol {
                 let meals = try await interactor.fetchData(search: query)
                 await MainActor.run {
                     view?.showMeals(meals)
-                    print("SHOW MEALS")
                 }
             } catch {
                 await MainActor.run {

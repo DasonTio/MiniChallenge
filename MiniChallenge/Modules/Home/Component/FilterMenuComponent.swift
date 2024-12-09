@@ -34,7 +34,6 @@ class FilterMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDel
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        print(menus.count)
     }
     
     required init?(coder: NSCoder) {
@@ -59,7 +58,6 @@ class FilterMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterMenuComponentCell.identifier, for: indexPath) as? FilterMenuComponentCell ?? FilterMenuComponentCell()
         
-        print(menus[indexPath.row])
         cell.config(title: menus[indexPath.row])
         
         return cell

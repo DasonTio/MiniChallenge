@@ -22,10 +22,8 @@ final class MealRouter: MealRouterProtocol{
     func createModule() -> UIViewController {
         let router = self
         let view = MealViewController()
-        let interactor = MealInteractor()
         let presenter = MealPresenter(
             view: view,
-            interactor: interactor,
             router: router
         )
         

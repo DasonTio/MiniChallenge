@@ -23,7 +23,6 @@
 		EF609E982D02A93200E59A7C /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF609E972D02A92F00E59A7C /* HomeRouter.swift */; };
 		EF66D0812D02FA07008ACFD0 /* MealRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D0802D02FA05008ACFD0 /* MealRouter.swift */; };
 		EF66D0892D02FA2A008ACFD0 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D0882D02FA27008ACFD0 /* MealViewController.swift */; };
-		EF66D08B2D0300E6008ACFD0 /* MealInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */; };
 		EF66D08D2D030107008ACFD0 /* MealPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF66D08C2D030105008ACFD0 /* MealPresenter.swift */; };
 		EFECD8002D01F8DC00634820 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD7FF2D01F8D800634820 /* Meal.swift */; };
 		EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFECD8062D0200E900634820 /* SearchBarComponent.swift */; };
@@ -69,7 +68,6 @@
 		EF609E972D02A92F00E59A7C /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		EF66D0802D02FA05008ACFD0 /* MealRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRouter.swift; sourceTree = "<group>"; };
 		EF66D0882D02FA27008ACFD0 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
-		EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInteractor.swift; sourceTree = "<group>"; };
 		EF66D08C2D030105008ACFD0 /* MealPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPresenter.swift; sourceTree = "<group>"; };
 		EFECD7FF2D01F8D800634820 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		EFECD8062D0200E900634820 /* SearchBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarComponent.swift; sourceTree = "<group>"; };
@@ -218,19 +216,10 @@
 			isa = PBXGroup;
 			children = (
 				EF66D0832D02FA0F008ACFD0 /* View */,
-				EF66D0822D02FA0A008ACFD0 /* Interactor */,
 				EF66D0842D02FA14008ACFD0 /* Presenter */,
 				EF66D0802D02FA05008ACFD0 /* MealRouter.swift */,
 			);
 			path = Meal;
-			sourceTree = "<group>";
-		};
-		EF66D0822D02FA0A008ACFD0 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				EF66D08A2D0300E2008ACFD0 /* MealInteractor.swift */,
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EF66D0832D02FA0F008ACFD0 /* View */ = {
@@ -418,7 +407,6 @@
 				EFECD80B2D020B3A00634820 /* FilterMenuComponent+Cell.swift in Sources */,
 				EF0DE9D32D008083004C54C3 /* SceneDelegate.swift in Sources */,
 				EF609E892D02959100E59A7C /* CardMenuComponent+Cell.swift in Sources */,
-				EF66D08B2D0300E6008ACFD0 /* MealInteractor.swift in Sources */,
 				EFECD8002D01F8DC00634820 /* Meal.swift in Sources */,
 				EFECD8072D0200EE00634820 /* SearchBarComponent.swift in Sources */,
 				EF609E942D02A75200E59A7C /* MealResponse.swift in Sources */,

@@ -52,7 +52,7 @@ class HomeViewController: UIViewController, HomeViewProtocol{
     }
     
     func showError(_ message: String) {
-        print(message)
+        debugPrint(message)
     }
     
     private func setupViews(){

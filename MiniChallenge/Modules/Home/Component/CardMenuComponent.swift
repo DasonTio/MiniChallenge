@@ -49,7 +49,6 @@ class CardMenuComponent: UIView, UICollectionViewDelegate, UICollectionViewDeleg
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
-        print(data.count)
     }
     
     required init?(coder: NSCoder) {
