@@ -13,12 +13,13 @@ protocol MealPresenterProtocol: AnyObject{
 
 class MealPresenter: MealPresenterProtocol{
     weak var view: MealViewProtocol?
-    var interactor: MealInteractorProtocol
     var router: MealRouterProtocol
     
-    init(view: MealViewProtocol, interactor: MealInteractorProtocol, router: MealRouterProtocol) {
+    init(
+        view: MealViewProtocol,
+        router: MealRouterProtocol
+    ) {
         self.view = view
-        self.interactor = interactor
         self.router = router
     }
     

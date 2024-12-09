@@ -30,8 +30,8 @@ class MealViewController: UIViewController, MealViewProtocol {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 24, weight: .bold) // Increased font size for better visibility
-        label.numberOfLines = 0 // Allow multi-line
+        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -39,7 +39,7 @@ class MealViewController: UIViewController, MealViewProtocol {
     private let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true // Prevent image overflow
+        iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         return iv
     }()
@@ -68,7 +68,6 @@ class MealViewController: UIViewController, MealViewProtocol {
     private func setupScrollView() {
         view.addSubview(scrollView)
         
-        // Set scrollView constraints to match the view's safe area
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -76,23 +75,20 @@ class MealViewController: UIViewController, MealViewProtocol {
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
         
-        // Add contentView inside scrollView
         scrollView.addSubview(contentView)
         
-        // Set contentView constraints to match scrollView's width and allow vertical scrolling
         NSLayoutConstraint.activate([
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 16),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32) // 16 + 16 padding
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
     }
     
     private func setupImage(){
         guard let imageUrlString = meal?.image, let url = URL(string: imageUrlString) else { return }
         
-        // Use URLSession to fetch image data asynchronously
         URLSession.shared.dataTask(with: url){ [weak self] data, response, error in
             guard let data = data, error == nil else { return }
             DispatchQueue.main.async {
@@ -102,19 +98,15 @@ class MealViewController: UIViewController, MealViewProtocol {
     }
     
     private func setupView() {
-        // Add arranged subviews
         contentView.addArrangedSubview(titleLabel)
         titleLabel.text = meal?.title
         
-        // Add imageView
         contentView.addArrangedSubview(imageView)
         
-        // Set imageView height constraint
         NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 250) // Adjust height as needed
+            imageView.heightAnchor.constraint(equalToConstant: 250)
         ])
         
-        // Add Ingredients Section
         let ingredientsTitle = UILabel()
         ingredientsTitle.text = "Ingredients"
         ingredientsTitle.font = .systemFont(ofSize: 18, weight: .semibold)
@@ -122,7 +114,6 @@ class MealViewController: UIViewController, MealViewProtocol {
         contentView.addArrangedSubview(ingredientsTitle)
         
         guard let ingredients = meal?.ingredients else {
-            // If ingredients are nil, you might want to show a placeholder or skip
             let noIngredientsLabel = UILabel()
             noIngredientsLabel.text = "No ingredients available."
             noIngredientsLabel.font = .systemFont(ofSize: 14, weight: .regular)
@@ -135,11 +126,10 @@ class MealViewController: UIViewController, MealViewProtocol {
             let ingredientLabel = UILabel()
             ingredientLabel.text = "• \(ingredient.name): \(ingredient.measurement)"
             ingredientLabel.font = .systemFont(ofSize: 14, weight: .regular)
-            ingredientLabel.numberOfLines = 0 // Allow multi-line
+            ingredientLabel.numberOfLines = 0
             contentView.addArrangedSubview(ingredientLabel)
         }
         
-        // Add Instructions Section
         let instructionTitle = UILabel()
         instructionTitle.text = "Instructions"
         instructionTitle.font = .systemFont(ofSize: 18, weight: .semibold)
@@ -149,7 +139,7 @@ class MealViewController: UIViewController, MealViewProtocol {
         let instructionDescription = UILabel()
         instructionDescription.text = meal?.description
         instructionDescription.font = .systemFont(ofSize: 14, weight: .regular)
-        instructionDescription.numberOfLines = 0 // Allow multi-line
+        instructionDescription.numberOfLines = 0 
         contentView.addArrangedSubview(instructionDescription)
     }
 }

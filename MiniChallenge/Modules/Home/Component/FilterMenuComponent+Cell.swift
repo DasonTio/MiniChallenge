@@ -23,6 +23,8 @@ class FilterMenuComponentCell: UICollectionViewCell {
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 16
+        
+        //MARK: Deprecated but no alternatives
         button.contentEdgeInsets = UIEdgeInsets(
             top: 10,
             left: 20,
